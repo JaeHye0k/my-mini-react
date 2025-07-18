@@ -1,15 +1,19 @@
 {
-  "name": "my-mini-react",
-  "version": "1.0.0",
-  "description": "mini react implementation for study",
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+    "name": "my-mini-react",
+    "version": "1.0.0",
+    "description": "mini react implementation for study",
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "main": "index.js",
+    "directories": {
+        "example": "examples"
+    },
+    "scripts": {
+        "start": "node scripts/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "express": "^5.1.0"
+    }
 }
