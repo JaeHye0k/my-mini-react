@@ -25,6 +25,7 @@ my-mini-react/
 -   상태 기능(`useState` 유사 기능) 및 리렌더링 처리
 
 ### 📌 구현 순서
+`packages/core/index.js`에 createElement → render → useState 순으로 구현
 
 1. **React.createElement**
 
@@ -61,6 +62,7 @@ my-mini-react/
 -   `npm start` 시 자동 컴파일
 
 ### 📌 구현 방식
+`packages/compiler/index.js`에서 Babel 기반 JSX 컴파일러 작성
 
 1. **JSX → JS 트랜스파일러**
 
@@ -86,6 +88,7 @@ my-mini-react/
 -   `localhost:9999`에 HTML 및 컴파일된 JS 제공
 
 ### 📌 구현 방식
+`npm start`로 컴파일 + 서버 실행 스크립트 작성
 
 -   `express` 또는 `http` 내장 모듈로 서버 구성
 -   정적 파일 서빙 (public/index.html + dist/bundle.js)
@@ -156,19 +159,3 @@ function App() {
 
 ReactDOM.render(React.createElement(App), document.getElementById("root"));
 ```
-
----
-
-### 다음 단계 추천:
-
--   [ ] `packages/core/index.js`에 createElement → render → useState 순으로 구현
--   [ ] `packages/compiler/index.js`에서 Babel 기반 JSX 컴파일러 작성
--   [ ] `npm start`로 컴파일 + 서버 실행 스크립트 작성
-
----
-
-**Q1:** JSX를 직접 AST로 파싱해 React.createElement를 만들려면 Babel 없이 어떻게 구현할 수 있을까?
-
-**Q2:** 상태가 변경될 때마다 전체 트리를 다시 렌더링하는 방식에서 성능 최적화를 위해 어떤 개선을 도입할 수 있을까?
-
-**Q3:** React의 `reconciliation` 알고리즘을 단순화해 직접 구현한다면 어떤 방식으로 시작할 수 있을까?
